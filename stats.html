@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>By the Numbers · Texas Department of Corrections</title>
+<meta name="description" content="The Texas Department of Corrections, in figures: population, acreage, executions, escapes, cost per inmate per day." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;900&family=Special+Elite&family=Rye&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="inner">
+    <a class="brand" href="index.html">
+      <svg class="star" viewBox="0 0 24 24"><polygon points="12,2 14.6,9 22,9 16,13.6 18,21 12,16.6 6,21 8,13.6 2,9 9.4,9"/></svg>
+      <span>T · D · C</span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="index.html">Home</a>
+      <a href="history.html">History</a>
+      <a href="units.html">The Units</a>
+      <a href="rodeo.html">The Rodeo</a>
+      <a href="stats.html" class="active">By the Numbers</a>
+      <a href="figures.html">Figures</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Toggle menu">≡</button>
+  </div>
+</header>
+
+<section class="hero" style="min-height: 60vh; padding-top: 9rem; padding-bottom: 3rem;">
+  <div class="hero-grid" style="grid-template-columns: 1fr;">
+    <div class="reveal">
+      <span class="eyebrow">Chapter IV · The Ledgers</span>
+      <h1 style="font-size: clamp(2.4rem, 6vw, 4.8rem);">By the Numbers</h1>
+      <p class="lede" style="margin-top:1.4rem;">
+        The TDC was a great accountant of itself. It tallied bushels and bales, daily counts and hospital admissions, calories served and miles driven. Some of those numbers tell the story plainly. Some of them tell it by what they leave out.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Top stat grid -->
+<section style="padding-top: 1rem;">
+  <div class="container">
+    <div class="stat-grid">
+      <div class="stat-card reveal">
+        <div class="big">1</div>
+        <div class="label">Founding inmate</div>
+        <div class="note">William G. Sansom, horse theft, three years. Admitted October 1, 1849.</div>
+      </div>
+      <div class="stat-card reveal reveal-d1">
+        <div class="big">140</div>
+        <div class="label">Years as the TDC</div>
+        <div class="note">From the State Penitentiary Act of 1849 through the agency's renaming on September 1, 1989.</div>
+      </div>
+      <div class="stat-card reveal reveal-d2">
+        <div class="big">27</div>
+        <div class="label">Units at peak</div>
+        <div class="note">Operating in 1989, the year the system was renamed and reorganized as the TDCJ.</div>
+      </div>
+      <div class="stat-card reveal reveal-d3">
+        <div class="big">100,000+</div>
+        <div class="label">Acres of prison farmland</div>
+        <div class="note">Cotton, rice, sugarcane, sorghum, vegetables; the largest single agricultural enterprise in Texas in the 1960s.</div>
+      </div>
+
+      <div class="stat-card reveal">
+        <div class="big">361</div>
+        <div class="label">Executions in "Old Sparky"</div>
+        <div class="note">Between February 8, 1924 and July 30, 1964. The chair, built by inmates, is at the Texas Prison Museum.</div>
+      </div>
+      <div class="stat-card reveal reveal-d1">
+        <div class="big">1st</div>
+        <div class="label">Lethal injection on Earth</div>
+        <div class="note">Charles Brooks Jr., December 7, 1982. The State of Texas inaugurated the modern method of execution.</div>
+      </div>
+      <div class="stat-card reveal reveal-d2">
+        <div class="big">161</div>
+        <div class="label">Days of trial in <em>Ruiz</em></div>
+        <div class="note">The longest trial in the history of the United States district courts. 349 witnesses; 1,565 exhibits.</div>
+      </div>
+      <div class="stat-card reveal reveal-d3">
+        <div class="big">$1.65</div>
+        <div class="label">Cost per inmate per day, 1968</div>
+        <div class="note">Lowest of any state prison system in the United States. The TDC was, by design, the cheapest in the country.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Population over time -->
+<section>
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow">Population</span>
+      <h2>Inmates held by the TDC, by year.</h2>
+      <p class="lede">A century and a half on a horizontal line. Numbers approximate; sources cited at the bottom.</p>
+    </div>
+
+    <div class="chart-card reveal">
+      <h3>Inmate Count, 1850 – 1989</h3>
+      <div class="sub">★ End-of-fiscal-year populations · selected years</div>
+      <div class="bar-chart" id="popChart">
+        <div class="bar-row" data-w="0.005"><span class="yr">1850</span><span class="bar"><span class="bar-fill"></span></span><span class="num">192</span></div>
+        <div class="bar-row" data-w="0.018"><span class="yr">1865</span><span class="bar"><span class="bar-fill"></span></span><span class="num">~700</span></div>
+        <div class="bar-row" data-w="0.05"><span class="yr">1880</span><span class="bar"><span class="bar-fill"></span></span><span class="num">~2,000</span></div>
+        <div class="bar-row" data-w="0.10"><span class="yr">1900</span><span class="bar"><span class="bar-fill"></span></span><span class="num">~4,000</span></div>
+        <div class="bar-row" data-w="0.13"><span class="yr">1920</span><span class="bar"><span class="bar-fill"></span></span><span class="num">~5,200</span></div>
+        <div class="bar-row" data-w="0.16"><span class="yr">1940</span><span class="bar"><span class="bar-fill"></span></span><span class="num">~6,500</span></div>
+        <div class="bar-row" data-w="0.30"><span class="yr">1960</span><span class="bar"><span class="bar-fill"></span></span><span class="num">~12,000</span></div>
+        <div class="bar-row" data-w="0.50"><span class="yr">1970</span><span class="bar"><span class="bar-fill"></span></span><span class="num">~20,000</span></div>
+        <div class="bar-row" data-w="0.74"><span class="yr">1980</span><span class="bar"><span class="bar-fill"></span></span><span class="num">~29,500</span></div>
+        <div class="bar-row" data-w="1.00"><span class="yr">1989</span><span class="bar"><span class="bar-fill"></span></span><span class="num">~40,000</span></div>
+      </div>
+      <p style="margin-top: 1.6rem; font-size: 0.85rem; color: var(--muted); font-family: var(--type); letter-spacing: 0.1em;">
+        Bars scaled to the 1989 inmate count. Population grew at roughly 7% per year through the late 1970s, breaching the federal cap that triggered <a href="history.html#ruiz">the Ruiz consent decree</a>.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Death house counts -->
+<section class="section-paper">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow">The Death House</span>
+      <h2 style="color: var(--ink);">Executions at the Walls Unit, 1924 – 1989.</h2>
+      <p class="lede" style="color: var(--ink-soft); max-width: 50em;">
+        Until 1924, executions were carried out by county sheriffs at the local courthouse. After centralization, every Texas execution has taken place in a single small room at the Walls Unit in Huntsville.
+      </p>
+    </div>
+
+    <div class="chart-card reveal" style="background: rgba(255,255,255,0.4); color: var(--ink); border-color: var(--ink-soft);">
+      <h3 style="color: var(--ink);">Executions by Decade</h3>
+      <div class="sub" style="color: var(--ink-soft);">★ As recorded in the Texas Execution Archive</div>
+      <div class="bar-chart" id="execChart">
+        <div class="bar-row" data-w="0.81" style="color: var(--ink);">
+          <span class="yr" style="color: var(--rust);">1920s</span>
+          <span class="bar" style="background: rgba(0,0,0,0.08);"><span class="bar-fill" style="background: linear-gradient(90deg,#5c1a14,#8b3a1f);"></span></span>
+          <span class="num" style="color: var(--ink);">81</span>
+        </div>
+        <div class="bar-row" data-w="1.00" style="color: var(--ink);">
+          <span class="yr" style="color: var(--rust);">1930s</span>
+          <span class="bar" style="background: rgba(0,0,0,0.08);"><span class="bar-fill" style="background: linear-gradient(90deg,#5c1a14,#8b3a1f);"></span></span>
+          <span class="num" style="color: var(--ink);">100</span>
+        </div>
+        <div class="bar-row" data-w="0.86" style="color: var(--ink);">
+          <span class="yr" style="color: var(--rust);">1940s</span>
+          <span class="bar" style="background: rgba(0,0,0,0.08);"><span class="bar-fill" style="background: linear-gradient(90deg,#5c1a14,#8b3a1f);"></span></span>
+          <span class="num" style="color: var(--ink);">86</span>
+        </div>
+        <div class="bar-row" data-w="0.66" style="color: var(--ink);">
+          <span class="yr" style="color: var(--rust);">1950s</span>
+          <span class="bar" style="background: rgba(0,0,0,0.08);"><span class="bar-fill" style="background: linear-gradient(90deg,#5c1a14,#8b3a1f);"></span></span>
+          <span class="num" style="color: var(--ink);">66</span>
+        </div>
+        <div class="bar-row" data-w="0.29" style="color: var(--ink);">
+          <span class="yr" style="color: var(--rust);">1960s</span>
+          <span class="bar" style="background: rgba(0,0,0,0.08);"><span class="bar-fill" style="background: linear-gradient(90deg,#5c1a14,#8b3a1f);"></span></span>
+          <span class="num" style="color: var(--ink);">29</span>
+        </div>
+        <div class="bar-row" data-w="0.0" style="color: var(--ink);">
+          <span class="yr" style="color: var(--rust);">1970s</span>
+          <span class="bar" style="background: rgba(0,0,0,0.08);"><span class="bar-fill" style="background: linear-gradient(90deg,#5c1a14,#8b3a1f);"></span></span>
+          <span class="num" style="color: var(--ink);">0 *</span>
+        </div>
+        <div class="bar-row" data-w="0.32" style="color: var(--ink);">
+          <span class="yr" style="color: var(--rust);">1980s</span>
+          <span class="bar" style="background: rgba(0,0,0,0.08);"><span class="bar-fill" style="background: linear-gradient(90deg,#5c1a14,#8b3a1f);"></span></span>
+          <span class="num" style="color: var(--ink);">32</span>
+        </div>
+      </div>
+      <p style="margin-top: 1.6rem; font-size: 0.85rem; color: var(--ink-soft); font-family: var(--type); letter-spacing: 0.1em;">
+        ★ <em>Furman v. Georgia</em> (1972) suspended capital punishment nationwide. Texas resumed executions in December 1982 — by lethal injection, the first in the world.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Curious figures -->
+<section>
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow">Curiosities</span>
+      <h2>Numbers from the margins of the ledger.</h2>
+    </div>
+    <div class="stat-grid">
+      <div class="stat-card reveal">
+        <div class="big">2 / 3</div>
+        <div class="label">Of staff dead, 1867 yellow fever</div>
+        <div class="note">The epidemic also killed roughly a third of the inmate population. The cemetery on Bowers Hill grew accordingly.</div>
+      </div>
+      <div class="stat-card reveal reveal-d1">
+        <div class="big">$50</div>
+        <div class="label">Hard Money purse</div>
+        <div class="note">The bag tied between a Brahma bull's horns at the Texas Prison Rodeo. Equivalent to a month's free-world wages in 1935.</div>
+      </div>
+      <div class="stat-card reveal reveal-d2">
+        <div class="big">52</div>
+        <div class="label">Inmates killed in the Texas Syndicate war</div>
+        <div class="note">1984–1985. The collapse of the building-tender system produced a vacuum that gangs filled with knives.</div>
+      </div>
+      <div class="stat-card reveal reveal-d3">
+        <div class="big">15</div>
+        <div class="label">Pages, handwritten</div>
+        <div class="note">The length of the David Ruiz petition that brought the federal courts down on the entire system.</div>
+      </div>
+      <div class="stat-card reveal">
+        <div class="big">95</div>
+        <div class="label">Bodies, Sugar Land 95</div>
+        <div class="note">Convict-leased Black men buried, unmarked, on the Imperial / Central Farm. Re-discovered in 2018 during school construction.</div>
+      </div>
+      <div class="stat-card reveal reveal-d1">
+        <div class="big">$0.21</div>
+        <div class="label">Hourly inmate wage, 1965</div>
+        <div class="note">Paid in scrip redeemable at the unit commissary for tobacco, candy, and writing paper. Field labor was unpaid.</div>
+      </div>
+      <div class="stat-card reveal reveal-d2">
+        <div class="big">~30k</div>
+        <div class="label">Average rodeo gate, 1955</div>
+        <div class="note">The grandstand seated 15,000. Standing room and the parking-lot overflow doubled it on a clear October Sunday.</div>
+      </div>
+      <div class="stat-card reveal reveal-d3">
+        <div class="big">2002</div>
+        <div class="label">Final dismissal of <em>Ruiz</em></div>
+        <div class="note">Thirty years after David Ruiz mailed his complaint. The longest-running prison-conditions case in American history.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Final note -->
+<section style="padding-top: 1rem;">
+  <div class="narrow prose reveal">
+    <span class="eyebrow">A Note on the Numbers</span>
+    <h2>What the books did not record.</h2>
+    <p>
+      The TDC, like every prison system, kept the books it was required to keep. Inmate counts, daily rations, escapes, executions, dollars per pound of cotton. It did not, generally, keep records of beatings; of the pace of the hoe squad on a 105-degree day; of the men who came in young and left old, or did not leave at all. Those numbers exist only in oral histories, court testimony, and the long memory of families. We have tried, where we can, to point to those records too.
+    </p>
+    <p>
+      Sources for figures on this page: the Texas State Auditor's Office, the Texas Prison Museum's executions registry, <em>Texas Tough</em> (Perkinson, 2010), <em>The Walls Came Tumbling Down</em> (Martin &amp; Ekland-Olson, 1987), the U.S. Bureau of Justice Statistics historical series, and the published findings of <em>Ruiz v. Estelle</em> (S.D. Tex. 1980).
+    </p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-mark">T · D · C</div>
+  <p>All figures are best-effort historical estimates compiled from public sources for the purposes of this tribute. The official record-keeper of the present-day Texas prison system is the Texas Department of Criminal Justice.</p>
+  <div class="tiny">★ <a href="index.html">Return to the Square</a> ★</div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

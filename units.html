@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Units · Texas Department of Corrections</title>
+<meta name="description" content="A guided map of the historic prison units of the Texas Department of Corrections — Huntsville, Eastham, Ramsey, Goree, and the rest." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;900&family=Special+Elite&family=Rye&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="inner">
+    <a class="brand" href="index.html">
+      <svg class="star" viewBox="0 0 24 24"><polygon points="12,2 14.6,9 22,9 16,13.6 18,21 12,16.6 6,21 8,13.6 2,9 9.4,9"/></svg>
+      <span>T · D · C</span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="index.html">Home</a>
+      <a href="history.html">History</a>
+      <a href="units.html" class="active">The Units</a>
+      <a href="rodeo.html">The Rodeo</a>
+      <a href="stats.html">By the Numbers</a>
+      <a href="figures.html">Figures</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Toggle menu">≡</button>
+  </div>
+</header>
+
+<section class="hero" style="min-height: 60vh; padding-top: 9rem; padding-bottom: 3rem;">
+  <div class="hero-grid" style="grid-template-columns: 1fr;">
+    <div class="reveal">
+      <span class="eyebrow">Chapter II · The Farms and the Walls</span>
+      <h1 style="font-size: clamp(2.4rem, 6vw, 4.8rem);">The Units</h1>
+      <p class="lede" style="margin-top:1.4rem;">
+        At its 1989 peak the TDC ran twenty-seven prison units across more than 100,000 acres of Texas farmland — most of it bought back from the convict-lease plantations the state had once leased its prisoners <em>to</em>. Each unit had its own crop, its own warden, its own legend. Click a star on the map.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top: 1rem;">
+  <div class="container">
+    <div class="units-layout">
+
+      <!-- Texas Map -->
+      <div class="tx-map-wrap reveal">
+        <h3>Map of the System</h3>
+        <svg id="tx-map" viewBox="0 0 540 540" xmlns="http://www.w3.org/2000/svg" aria-label="Map of Texas with prison units marked">
+          <!-- stylized Texas border -->
+          <path class="border" d="
+            M 120,55  L 248,55  L 252,128  L 312,128  L 338,150  L 392,158  L 425,178  L 452,205  L 478,232  L 502,265
+            L 498,302  L 478,330  L 460,355  L 425,390  L 388,418  L 348,440  L 312,452  L 282,468  L 256,478
+            L 234,492  L 210,475  L 192,452  L 178,432  L 162,410  L 145,392  L 128,378  L 110,365  L 92,348
+            L 74,328  L 60,305  L 48,278  L 36,252  L 24,225  L 56,205  L 86,192  L 108,170  L 120,140 Z
+          "/>
+
+          <!-- decorative compass rose -->
+          <g transform="translate(60, 460)" opacity="0.5">
+            <circle r="22" fill="none" stroke="#c8851a" stroke-width="0.6"/>
+            <polygon points="0,-22 4,0 0,22 -4,0" fill="#c8851a"/>
+            <polygon points="-22,0 0,4 22,0 0,-4" fill="#c8851a" opacity="0.6"/>
+            <text y="-26" text-anchor="middle" font-family="Special Elite" font-size="8" fill="#c8851a">N</text>
+          </g>
+
+          <!-- Brazos river hint -->
+          <path d="M 320,135 Q 340,200 350,260 Q 365,320 360,380 Q 358,420 348,445" fill="none" stroke="#3a4a5c" stroke-width="0.8" opacity="0.4"/>
+
+          <!-- Unit dots: positioned to roughly match Texas geography on this stylized shape -->
+          <g id="unit-dots">
+            <circle class="unit-dot" data-unit="walls"    cx="385" cy="290" r="6"/>
+            <circle class="unit-dot" data-unit="goree"    cx="378" cy="298" r="5"/>
+            <circle class="unit-dot" data-unit="wynne"    cx="392" cy="282" r="5"/>
+            <circle class="unit-dot" data-unit="eastham"  cx="395" cy="252" r="6"/>
+            <circle class="unit-dot" data-unit="ferguson" cx="378" cy="268" r="5"/>
+            <circle class="unit-dot" data-unit="coffield" cx="362" cy="222" r="6"/>
+            <circle class="unit-dot" data-unit="ramsey"   cx="402" cy="362" r="6"/>
+            <circle class="unit-dot" data-unit="darrington" cx="408" cy="372" r="5"/>
+            <circle class="unit-dot" data-unit="clemens"  cx="412" cy="385" r="5"/>
+            <circle class="unit-dot" data-unit="retrieve" cx="418" cy="395" r="5"/>
+            <circle class="unit-dot" data-unit="central"  cx="382" cy="350" r="5"/>
+            <circle class="unit-dot" data-unit="jester"   cx="370" cy="358" r="5"/>
+            <circle class="unit-dot" data-unit="mountain" cx="290" cy="245" r="5"/>
+            <circle class="unit-dot" data-unit="gatesville" cx="282" cy="240" r="5"/>
+            <circle class="unit-dot" data-unit="hilltop" cx="285" cy="252" r="5"/>
+          </g>
+
+          <!-- a star for Huntsville -->
+          <g transform="translate(385,290)" pointer-events="none">
+            <polygon points="0,-14 4,-4 14,-4 6,3 9,13 0,7 -9,13 -6,3 -14,-4 -4,-4" fill="#e2a134" opacity="0.85"/>
+          </g>
+
+          <text x="416" y="288" class="unit-label">Huntsville</text>
+          <text x="430" y="370" class="unit-label">Brazos</text>
+          <text x="60"  y="60"  class="unit-label" style="font-size:10px;">TEXAS</text>
+        </svg>
+        <p style="font-family: var(--type); font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-top: 1rem; line-height: 1.6;">
+          Tap a star to highlight a unit. Locations stylized; not to scale.
+        </p>
+      </div>
+
+      <!-- Unit list -->
+      <div class="unit-list">
+        <article class="unit reveal" data-unit="walls">
+          <div class="unit-name">Huntsville Unit — "The Walls"</div>
+          <div class="unit-meta">★ Founded 1849 · The Mother Unit</div>
+          <p>The original Texas penitentiary. Twenty-foot red brick walls, a textile factory, the central administration, the death house. Every TDC inmate, until 1965, was processed here. The execution chamber — and every Texas execution since 1924 — has been carried out in the corner of this compound.</p>
+        </article>
+
+        <article class="unit reveal" data-unit="goree">
+          <div class="unit-name">Goree Unit</div>
+          <div class="unit-meta">★ 1911 · Women's Prison until 1981</div>
+          <p>Originally the women's farm of the TDC, named for prison commissioner Thomas Jewett Goree. Its inmates formed the "Goree Girls" string band, broadcast weekly on Houston radio in the 1940s — the first all-female prison band in the country.</p>
+        </article>
+
+        <article class="unit reveal" data-unit="wynne">
+          <div class="unit-name">Wynne Unit</div>
+          <div class="unit-meta">★ 1937 · The Treatment Unit</div>
+          <p>Built across the highway from the Walls. For decades it housed the system's psychiatric and elderly inmates. It was here, in 1972, that an inmate named David Ruiz wrote out his complaint to the federal court.</p>
+        </article>
+
+        <article class="unit reveal" data-unit="eastham">
+          <div class="unit-name">Eastham Unit</div>
+          <div class="unit-meta">★ 1917 · The Cotton Farm</div>
+          <p>Twelve thousand acres of bottomland on the Trinity River. The hardest unit in the system — the place sent men were sent to break, and where, in 1934, Bonnie and Clyde drove up to the wood line and freed five inmates in a hail of fire.</p>
+        </article>
+
+        <article class="unit reveal" data-unit="ferguson">
+          <div class="unit-name">Ferguson Unit</div>
+          <div class="unit-meta">★ 1962 · Youth Offenders</div>
+          <p>Named for Governor "Pa" Ferguson. Built under O.B. Ellis as the system's prison for first-offense young men, with academic and vocational schooling at its core.</p>
+        </article>
+
+        <article class="unit reveal" data-unit="coffield">
+          <div class="unit-name">Coffield Unit</div>
+          <div class="unit-meta">★ 1965 · The Largest in Texas</div>
+          <p>Twenty-two thousand acres in Tennessee Colony. At one time the largest prison in the United States by inmate population. Named for prison board chairman H. H. "Pete" Coffield.</p>
+        </article>
+
+        <article class="unit reveal" data-unit="ramsey">
+          <div class="unit-name">Ramsey Unit</div>
+          <div class="unit-meta">★ 1908 · The Sugar Plantation</div>
+          <p>Bought from the Sugar Land sugar planters who had leased its convicts since 1878. Cane, then cotton, then a cattle ranch. Lightnin' Hopkins's father did time here. So did much of Texas blues.</p>
+        </article>
+
+        <article class="unit reveal" data-unit="darrington">
+          <div class="unit-name">Darrington Unit</div>
+          <div class="unit-meta">★ 1917 · Cotton, Corn, Cattle</div>
+          <p>Across the Brazos from Ramsey. Folklorist John A. Lomax recorded prisoners here in 1933 — songs that would become the canon of American work-song scholarship.</p>
+        </article>
+
+        <article class="unit reveal" data-unit="clemens">
+          <div class="unit-name">Clemens Unit</div>
+          <div class="unit-meta">★ 1893 · Brazoria County</div>
+          <p>One of the oldest farm units. Cane, cotton, vegetables. Inmates from Clemens worked the State Cemetery and built much of the highway between Brazoria and Angleton.</p>
+        </article>
+
+        <article class="unit reveal" data-unit="retrieve">
+          <div class="unit-name">Retrieve Unit</div>
+          <div class="unit-meta">★ 1918 · Coastal Bottoms</div>
+          <p>Named, perhaps darkly, for the impossibility of escape across the surrounding marsh. The hot squad of Retrieve was Texas folklore by the 1940s.</p>
+        </article>
+
+        <article class="unit reveal" data-unit="central">
+          <div class="unit-name">Central Unit</div>
+          <div class="unit-meta">★ 1909 · Sugar Land</div>
+          <p>Imperial / Central Farm. Sugar capital of Texas. The unit's cemetery, rediscovered in 2018, holds the remains of 95 convict-leased Black men — the bones beneath the fields.</p>
+        </article>
+
+        <article class="unit reveal" data-unit="jester">
+          <div class="unit-name">Jester Unit</div>
+          <div class="unit-meta">★ 1885 · Richmond</div>
+          <p>The pre-release and trusty unit, on the Harlem prison farm tract. Its dairy and hog operation supplied the entire system.</p>
+        </article>
+
+        <article class="unit reveal" data-unit="mountain">
+          <div class="unit-name">Mountain View Unit</div>
+          <div class="unit-meta">★ 1975 · Gatesville · Death Row (Women)</div>
+          <p>One of the prison farms transferred from the Texas Youth Council. After 1981 it became the women's death row, then the female maximum-security campus.</p>
+        </article>
+
+        <article class="unit reveal" data-unit="gatesville">
+          <div class="unit-name">Gatesville Units</div>
+          <div class="unit-meta">★ 1975 · A Cluster of Five</div>
+          <p>The former state schools for boys, transferred to the TDC after court-ordered juvenile reforms. A whole town's economy is the prisons.</p>
+        </article>
+
+        <article class="unit reveal" data-unit="hilltop">
+          <div class="unit-name">Hilltop Unit</div>
+          <div class="unit-meta">★ 1981 · Gatesville</div>
+          <p>The first new women's unit built after Goree was decommissioned for women. Industrial garment plant; the women sewed the system's own uniforms.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-paper">
+  <div class="narrow prose reveal">
+    <span class="eyebrow">A Note on the Land</span>
+    <h2>The state owned more cotton ground than any planter in Texas history.</h2>
+    <p>
+      By 1965 the Texas Department of Corrections operated more than 100,000 acres of farmland — fields of cotton, sugarcane, rice, sorghum, and vegetables; herds of dairy cattle, beef cattle, hogs, and horses; an entire feed mill at the Wynne Unit and a textile factory inside the Walls. The TDC raised, slaughtered, and ate most of what fed itself, and sold the rest to the state at cost. <em>Self-supporting</em> was the boast. Cheap was the truth.
+    </p>
+    <p>
+      The land was worked by men in white. The horses were ridden by men in gray. The bell rang at dawn and again at dusk. For more than a century the rhythm of an East Texas day — sunup, work, sundown, count — was the rhythm of the system.
+    </p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-mark">T · D · C</div>
+  <p>Unit histories drawn from the TDCJ Unit Directory, the Texas State Historical Association, the Texas Prison Museum, and the Sugar Land 95 historical record.</p>
+  <div class="tiny">★ <a href="index.html">Return to the Square</a> ★</div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
